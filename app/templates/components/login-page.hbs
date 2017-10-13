@@ -1,0 +1,16 @@
+{{#if authManager.currentUser}}
+  Logged in as {{authManager.currentUser.email}}
+{{ else }}
+  <h2>Login page</h2>
+  <p>Use login / password</p>
+
+  <form {{action 'authenticate' on='submit'}}>
+    {{input value=login placeholder='Login'}}<br>
+    {{input value=password placeholder='Password' type='password'}}<br>
+    <button type="submit">Login</button>
+  </form>
+{{/if}}
+
+<br>
+
+{{#link-to 'secret'}}<strong>Secret page under token</strong>{{/link-to}}

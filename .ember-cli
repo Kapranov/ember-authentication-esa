@@ -1,0 +1,5 @@
+{
+  "liveReload": true,
+  "watcher": "polling",
+  "disableAnalytics": false
+}
